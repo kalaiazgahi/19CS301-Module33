@@ -1,35 +1,39 @@
 # 19CS301-Module33
 Exp.No:3(a)	STRING- FIND AND REPLACE
 ### AIM
-To write a python function to accept a string, word to be replaced and replace the words of the string, get the new word to be replaced from the user.
+To write a Python function that accepts a string and prints the first three and last three characters of the string.
+
 ### ALGORITHM
-Step 1:	 Begin the program.
 
-Step 2:	 Input the original string (str1) and the word to replace (replace_str)
+Step 1: Begin the program.
 
-Step 3:	 Ask the user to input the replacement word (str2).
+Step 2: Define a function slice() that takes a string as input.
 
-Step 4:	 Replace all occurrences of replace_str in str1 with str2 using replace() method in Python.
+Step 3: Use string slicing to get the first three characters (string[:3]).
 
-Step 5:	 The modified string is stored in str3.
+Step 4: Use string slicing to get the last three characters (string[-3:]).
 
-Step 6:	 Display the original string (str1) to show the user the initial string.
+Step 5: Display the first and last three characters.
 
-Step 7:	 Display the modified string (str3) to show the user the string after the replacement.
-
-Step 8:	 Terminate the program.
+Step 6: Terminate the program.
 
 ### PROGRAM
 ```def replacestr(str1,replace_str):
-    str2=input()
-    str3=str1.replace(replace_str,str2)
-    print(f"The old string is {str1}\nthe new string is {str3}")
+   def slice(a):
+    b=str(a)[0:3]
+    c=str(a)[-3:]
+    print("The first 3 characters are '"+b+"'")
+    print("The last 3 characters are '"+c+"'")
+a=input()    
 ```
 ### OUTPUT
- ![image](https://github.com/user-attachments/assets/ab789972-0bcc-4de6-a234-f80f5209ed92)
+ ![image](https://github.com/user-attachments/assets/f5e9f3fe-b5f1-435f-b9fb-572fe4ae2ab3)
+
 
 ### RESULT
-Thus the python program of find and replace is implemented and executed successfully.
+Thus, the Python function that accepts a string and prints the first three and last three characters has been implemented and executed successfully.
+
+
 
 
 Exp.No:3(b)	REGEX-PATTERN MATCHING USING REGEX
@@ -101,33 +105,44 @@ Thus the python program for printing a list with even numbers up to n, was imple
 
 Exp.No:3(d)	TUPLES- A TUPLE WITH MULTIPLES OF 5
 ### AIM
-To write a python program to create the tuple by the multiples of 5 up to N. Get the N value from the user.
+To write a Python program to create a tuple with multiples of 3 up to N (excluding N), and print the sum of the elements in the tuple. The value of N is to be entered by the user.
+
+
 ### ALGORITHM
 
-Step 1:	 Begin the program.
+Step 1: Begin the program.
 
-Step 2:	 Accept an integer N from the user.
+Step 2: Accept an integer N from the user.
 
-Step 3:	 Define an empty tuple multiples_of_5.
+Step 3: Initialize an empty list multiples_of_3_list.
 
-Step 4:	 Loop through the numbers starting from 5, up to N-1 (not including N), with a step size of 5 For each value of i, add i to the tuple multiples_of_5.
+Step 4: Use a for loop to iterate from 3 to N (exclusive), with a step of 3.
 
-Step 5:	 Return the multiples_of_5 tuple.
+ 
+Step 5: Convert the list to a tuple named multiples_of_3_tuple.
 
-Step 6:	 print the resultant tuple.
+Step 6: Calculate the sum of the tuple using sum() function.
 
-Step 7:	 Terminate the program.
+Step 7: Print the tuple and the sum.
+
+Step 8: Terminate the program.
+
+
 ### PROGRAM
 ```
-def create_tuple(N):
-    multiples_of_5 = tuple(i for i in range(5, N, 5))
-    return multiples_of_5
-N = int(input())
-result = create_tuple(N)
-print(f"{result}")
+a=int(input())
+b=[]
+sum=0
+for i in range(3,a,3):
+    sum+=i
+    b.append(i)
+print(tuple(b))
+print("Sum is",sum)
+    
 ```
 ### OUTPUT
-![image](https://github.com/user-attachments/assets/a16820ca-d669-4520-b141-c4e0a836c910)
+![image](https://github.com/user-attachments/assets/65fa6bfc-46e8-45c2-b2ad-e5fe4f573728)
+
 
 
  
